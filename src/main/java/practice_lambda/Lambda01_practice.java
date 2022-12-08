@@ -8,6 +8,17 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Lambda01_practice {
+
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+
+
     public static void main(String[] args) {
 
         List<Integer> list = new ArrayList<>(Arrays.asList(-5, -8, -2, -12, 0, 1, 12, 5, 5, 6, 9, 15, 8));
@@ -32,12 +43,12 @@ public class Lambda01_practice {
         System.out.println();
         elTersSirala(list);
         System.out.println();
-        System.out.println("pozKup5List(list) = " + pozKup5List(list));
+        System.out.println(ANSI_WHITE+"pozKup5List(list) = " + pozKup5List(list));
         pozKup5List2(list);
-        System.out.println("pozKareSon5DegilList(list) = " + pozKareSon5DegilList(list));
-        System.out.println("elToplam(list) = " + elToplam(list));
-        System.out.println("elToplamReference(list) = " + elToplamReference(list));
-        System.out.println("elToplamReferenceInt(list) = " + elToplamReferenceInt(list));
+        System.out.println(ANSI_PURPLE+"pozKareSon5DegilList(list) = " + pozKareSon5DegilList(list));
+        System.out.println(ANSI_YELLOW +"elToplam(list) = " + elToplam(list));
+        System.out.println(ANSI_BLUE+"elToplamReference(list) = " + elToplamReference(list));
+        System.out.println(ANSI_BLUE+"elToplamReferenceInt(list) = " + elToplamReferenceInt(list));
         pozElToplam(list);
 
     }
@@ -150,7 +161,7 @@ public class Lambda01_practice {
 
     public static void pozElToplam(List<Integer>l){
 
-        System.out.println(l.stream().filter(t -> t > 0).reduce(0, Integer::sum));
+        System.out.println(ANSI_RED+l.stream().filter(t -> t > 0).reduce(0, Integer::sum));
     }
 
 
